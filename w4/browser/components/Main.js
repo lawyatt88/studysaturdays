@@ -3,7 +3,6 @@ import axios from 'axios';
 
 import StudentList from './StudentList.js' 
 import SingleStudent from './SingleStudent.js' 
-import NewStudentForm from './NewStudentForm.js' 
 
 export default class Main extends Component {
     constructor(props){
@@ -61,10 +60,6 @@ export default class Main extends Component {
         return (
             <div>
                 <h1>Students</h1>
-                <button onClick={this.handleClick}>Add Student</button>
-                {
-                    this.state.showStudent ? <NewStudentForm addStudent={this.addStudent} /> : null
-                }
                 <table>
                     <thead>
                         <tr>

@@ -18972,10 +18972,6 @@ var _SingleStudent = __webpack_require__(55);
 
 var _SingleStudent2 = _interopRequireDefault(_SingleStudent);
 
-var _NewStudentForm = __webpack_require__(56);
-
-var _NewStudentForm2 = _interopRequireDefault(_NewStudentForm);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -19060,12 +19056,6 @@ var Main = function (_Component) {
                     null,
                     'Students'
                 ),
-                _react2.default.createElement(
-                    'button',
-                    { onClick: this.handleClick },
-                    'Add Student'
-                ),
-                this.state.showStudent ? _react2.default.createElement(_NewStudentForm2.default, { addStudent: this.addStudent }) : null,
                 _react2.default.createElement(
                     'table',
                     null,
@@ -20131,13 +20121,6 @@ var SingleStudent = function SingleStudent(props) {
 };
 
 exports.default = SingleStudent;
-
-/***/ }),
-/* 56 */
-/***/ (function(module, exports) {
-
-"use strict";
-throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'C:\\Users\\owner\\study-saturdays\\w4\\browser\\components\\NewStudentForm.js'");
 
 /***/ })
 /******/ ]);
