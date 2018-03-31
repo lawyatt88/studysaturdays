@@ -10,9 +10,12 @@ const avgGrade = tests => {
 
 const SingleStudent = (props) => {
     console.log('ppp', props)
-   return ( <div>
+    const { tests } = props.student
+    const hasTests = tests.length ? true : false
+
+    return ( <div>
         <h3>{props.student.fullName}</h3>
-        <h3>Average grade: {avgGrade(props.student.tests)}%</h3>
+        <h3>Average grade: {tests.length && avgGrade(props.student.tests)}%</h3>
         <div>
             <table>
                 <thead>
@@ -23,7 +26,7 @@ const SingleStudent = (props) => {
                 </thead>
                 <tbody>
                 {
-                    props.student.tests.map((test) => {
+                    hasTests && props.student.tests.map((test) => {
                         return (
                             <tr key={test.id}>
                                 <td>{test.subject}</td>

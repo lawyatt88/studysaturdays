@@ -20061,6 +20061,10 @@ var avgGrade = function avgGrade(tests) {
 
 var SingleStudent = function SingleStudent(props) {
     console.log('ppp', props);
+    var tests = props.student.tests;
+
+    var hasTests = tests.length ? true : false;
+
     return _react2.default.createElement(
         'div',
         null,
@@ -20073,7 +20077,7 @@ var SingleStudent = function SingleStudent(props) {
             'h3',
             null,
             'Average grade: ',
-            avgGrade(props.student.tests),
+            tests.length && avgGrade(props.student.tests),
             '%'
         ),
         _react2.default.createElement(
@@ -20103,7 +20107,7 @@ var SingleStudent = function SingleStudent(props) {
                 _react2.default.createElement(
                     'tbody',
                     null,
-                    props.student.tests.map(function (test) {
+                    hasTests && props.student.tests.map(function (test) {
                         return _react2.default.createElement(
                             'tr',
                             { key: test.id },
@@ -20130,105 +20134,10 @@ exports.default = SingleStudent;
 
 /***/ }),
 /* 56 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var NewStudentForm = function (_Component) {
-  _inherits(NewStudentForm, _Component);
-
-  function NewStudentForm(props) {
-    _classCallCheck(this, NewStudentForm);
-
-    var _this = _possibleConstructorReturn(this, (NewStudentForm.__proto__ || Object.getPrototypeOf(NewStudentForm)).call(this, props));
-
-    _this.state = {
-      firstName: "",
-      lastName: "",
-      email: ""
-    };
-
-    _this.handleChange = _this.handleChange.bind(_this);
-    _this.handleSubmit = _this.handleSubmit.bind(_this);
-    return _this;
-  }
-
-  _createClass(NewStudentForm, [{
-    key: "handleChange",
-    value: function handleChange(event) {
-      console.log("What we're typing: ", event.target.value);
-      this.setState(_defineProperty({}, event.target.name, event.target.value));
-    }
-  }, {
-    key: "handleSubmit",
-    value: function handleSubmit(event) {
-      event.preventDefault();
-      var student = {
-        firstName: this.state.firstName,
-        lastName: this.state.lastName,
-        email: this.state.email
-      };
-      this.props.addStudent(this.state);
-      this.setState({ firstName: '', lastName: '', email: '' });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "form",
-        { onSubmit: this.handleSubmit },
-        _react2.default.createElement(
-          "label",
-          null,
-          "First Name:",
-          _react2.default.createElement("input", { type: "text", value: this.state.firstName, name: "firstName", onChange: this.handleChange })
-        ),
-        _react2.default.createElement(
-          "label",
-          null,
-          "Last Name:",
-          _react2.default.createElement("input", { type: "text", value: this.state.lastName, name: "lastName", onChange: this.handleChange })
-        ),
-        _react2.default.createElement(
-          "label",
-          null,
-          "Email:",
-          _react2.default.createElement("input", { type: "email", value: this.state.email, name: "email", onChange: this.handleChange })
-        ),
-        _react2.default.createElement(
-          "button",
-          { type: "submit" },
-          "Submit New Student"
-        )
-      );
-    }
-  }]);
-
-  return NewStudentForm;
-}(_react.Component);
-
-exports.default = NewStudentForm;
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'C:\\Users\\owner\\study-saturdays\\w4\\browser\\components\\NewStudentForm.js'");
 
 /***/ })
 /******/ ]);
